@@ -1,92 +1,134 @@
-import javax.swing.*;
-import java.awt.event.*;
-import java.io.*;
-import java.net.*;
+import java.awt.BorderLayout;
+import javax.swing.JFrame;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFileChooser;
 
-class SequenceUI extends JFrame implements ActionListener {
+import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.net.Socket;
+import java.awt.event.ActionEvent;
+import javax.swing.JPanel;
+import javax.swing.JLabel;
+import java.awt.Font;
+import java.awt.Graphics2D;
+import java.awt.Image;
+import java.awt.RenderingHints;
 
-    JFileChooser fc;
-    JButton b, b1;
+
+public class SequenceUI {
+	private static final JTextField txtUploadAFile = new JTextField();
+	private static final JButton upload = new JButton("Upload");
+	private static final JButton ChooseFile = new JButton("Choose File");
+	private static final JPanel panel = new JPanel();
+	private static final JLabel lblSequencer = new JLabel("SEQUENCER");
+	
+	private static final JButton b = new JButton();
+	
+	
+	private static final JLabel pic = new JLabel();
+	private static final ImageIcon image = new ImageIcon("logoGenome.png");
+	private static final JPanel picpanel = new JPanel();
+	
+	static JFileChooser fc;
+   
     JTextField tf;
     FileInputStream in;
     Socket s;
     DataOutputStream dout;
     DataInputStream din;
     int i;
-    private final JPanel panel = new JPanel();
-    private final JLabel lblSequencer = new JLabel("SEQUENCER");
-    private final JPanel panel_1 = new JPanel();
-    private final JTable table = new JTable();
+	
 
-    SequenceUI() {
-        super("client");
-        tf = new JTextField();
-        tf.setBounds(26, 311, 190, 30);
-        getContentPane().add(tf);
-
-        b = new JButton("Browse");
-        b.setBounds(231, 301, 152, 50);
-        getContentPane().add(b);
-        b.addActionListener(this);
-        b1 = new JButton("Upload");
-        b1.setBounds(231, 367, 152, 50);
-        getContentPane().add(b1);
-        b1.addActionListener(this);
-        fc = new JFileChooser();
-        getContentPane().setLayout(null);
-        panel.setBounds(325, 16, 165, 50);
-        
-        getContentPane().add(panel);
-        
-        panel.add(lblSequencer);
-        panel_1.setBounds(451, 145, 362, 258);
-        
-        getContentPane().add(panel_1);
-        table.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-        
-        panel_1.add(table);
-        setSize(850, 486);
-        setVisible(true);
-        try {
-            s = new Socket("localhost", 10);
-            dout = new DataOutputStream(s.getOutputStream());
-            din = new DataInputStream(s.getInputStream());
-            send();
-        } catch (Exception e) {
-        }
+   public static void main(String[] args) {
+   	txtUploadAFile.setText("Upload a File");
+   	txtUploadAFile.setBounds(45, 315, 146, 26);
+   	txtUploadAFile.setColumns(10);
+   	
+   
+      JFrame f = new JFrame("A JFrame");
+      f.setSize(1000, 520);
+      f.setLocation(300,200);
+      f.getContentPane().setLayout(null);
+      
+      Image g = getScaledImage(image.getImage(),195,185);
+      ImageIcon image = new ImageIcon(g);
+      b.setIcon(image);
+      
+      
+      
+      f.getContentPane().add(txtUploadAFile);
+      upload.setFont(new Font("Verdana", Font.PLAIN, 16));
+      upload.setBounds(230, 377, 146, 48);
+      
+      upload.addActionListener(new ActionListener() {
+    	  public void actionPerformed(ActionEvent arg0) {
+    		  
+    	  }
+      });
+      
+      
+      
+      f.getContentPane().add(upload);
+      ChooseFile.setFont(new Font("Verdana", Font.PLAIN, 16));
+      ChooseFile.addActionListener(new ActionListener() {
+    	  public void actionPerformed(ActionEvent e) {
+    	        try {
+    	            if (e.getSource() == ChooseFile) {
+    	                int x = fc.showOpenDialog(null);
+    	                if (x == JFileChooser.APPROVE_OPTION) {
+    	                    copy();
+    	                }
+    	            }
+    	            
+    	        } catch (Exception ex) {
+    	        }
+    	    }
+      });
+      
+      ChooseFile.setBounds(230, 304, 146, 48);
+      
+      f.getContentPane().add(ChooseFile);
+      panel.setBounds(355, 15, 298, 66);
+      
+      f.getContentPane().add(panel);
+      panel.add(lblSequencer);
+      lblSequencer.setFont(new Font("Verdana", Font.PLAIN, 45));
+      
+      b.setBounds(15, 15, 195, 185);
+      f.getContentPane().add(b);
+      
+     
+      f.setVisible(true);
+      f.setResizable(false);
+      
     }
+   
+   /*helper method used to resize image*/
+   private static Image getScaledImage(Image srcImg, int w, int h){
+	    BufferedImage resizedImg = new BufferedImage(w, h, BufferedImage.TYPE_INT_ARGB);
+	    Graphics2D g2 = resizedImg.createGraphics();
 
-    public void actionPerformed(ActionEvent e) {
-        try {
-            if (e.getSource() == b) {
-                int x = fc.showOpenDialog(null);
-                if (x == JFileChooser.APPROVE_OPTION) {
-                    copy();
-                }
-            }
-            if (e.getSource() == b1) {
-                send();
-            }
-        } catch (Exception ex) {
-        }
-    }
+	    g2.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR);
+	    g2.drawImage(srcImg, 0, 0, w, h, null);
+	    g2.dispose();
 
-    public void copy() throws IOException {
-        File f1 = fc.getSelectedFile();
-        tf.setText(f1.getAbsolutePath());
-        in = new FileInputStream(f1.getAbsolutePath());
-        while ((i = in.read()) != -1) {
-            System.out.print(i);
-        }
-    }
-
-    public void send() throws IOException {
-        dout.write(i);
-        dout.flush();
-
-    }
-
-    public static void main(String... d) {
-        new SequenceUI();
-    }
+	    return resizedImg;
+	}
+   
+   public static void copy() throws IOException {
+       File f1 = fc.getSelectedFile();
+       tf.setText(f1.getAbsolutePath());
+       in = new FileInputStream(f1.getAbsolutePath());
+       while ((i = in.read()) != -1) {
+           System.out.print(i);
+       }
+   }
 }
