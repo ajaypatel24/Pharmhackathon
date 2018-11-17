@@ -7250,3 +7250,1120 @@ Waiting for: org.eclipse.jface.text.reconciler.DirtyRegionQueue@23f6f4a7
 Stack Trace
 	at java.lang.Object.wait(Native Method)
 	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:180)
+
+!ENTRY org.eclipse.ui.monitoring 4 0 2018-11-17 12:26:00.224
+!MESSAGE UI freeze of 2.9s at 12:25:57.278
+!SUBENTRY 1 org.eclipse.ui.monitoring 1 0 2018-11-17 12:26:00.224
+!MESSAGE Sample at 12:25:58.274 (+0.996s)
+Thread 'main' tid=1 (TIMED_WAITING)
+!STACK 0
+Stack Trace
+	at java.lang.Thread.sleep(Native Method)
+	at org.eclipse.core.internal.jobs.JobManager.join(JobManager.java:1001)
+	at org.eclipse.wb.internal.core.utils.jdt.core.ProjectUtils$1.run(ProjectUtils.java:136)
+	at org.eclipse.wb.internal.core.utils.execution.ExecutionUtils.runIgnore(ExecutionUtils.java:92)
+	at org.eclipse.wb.internal.core.utils.jdt.core.ProjectUtils.waitForAutoBuild(ProjectUtils.java:130)
+	at org.eclipse.wb.internal.core.editor.palette.model.entry.LibraryInfo.ensure(LibraryInfo.java:60)
+	at org.eclipse.wb.core.editor.palette.model.entry.ComponentEntryInfo.ensureLibraries(ComponentEntryInfo.java:191)
+	at org.eclipse.wb.core.editor.palette.model.entry.ComponentEntryInfo.createTool(ComponentEntryInfo.java:443)
+	at org.eclipse.wb.core.editor.palette.model.entry.ToolEntryInfo$1.runObject(ToolEntryInfo.java:38)
+	at org.eclipse.wb.core.editor.palette.model.entry.ToolEntryInfo$1.runObject(ToolEntryInfo.java:1)
+	at org.eclipse.wb.internal.core.utils.execution.ExecutionUtils.runObjectLog(ExecutionUtils.java:304)
+	at org.eclipse.wb.core.editor.palette.model.entry.ToolEntryInfo.activate(ToolEntryInfo.java:33)
+	at org.eclipse.wb.internal.core.editor.palette.DesignerPalette$3.activate(DesignerPalette.java:282)
+	at org.eclipse.wb.core.controls.palette.PaletteComposite.selectEntry(PaletteComposite.java:227)
+	at org.eclipse.wb.core.controls.palette.PaletteComposite$EntryFigure$1.mouseUp(PaletteComposite.java:773)
+	at org.eclipse.wb.internal.draw2d.EventManager$2.invokeListener(EventManager.java:249)
+	at org.eclipse.wb.internal.draw2d.EventManager.sendEvent(EventManager.java:205)
+	at org.eclipse.wb.internal.draw2d.EventManager.handleMouseEvent(EventManager.java:191)
+	at org.eclipse.wb.internal.draw2d.EventManager.mouseUp(EventManager.java:180)
+	at sun.reflect.GeneratedMethodAccessor247.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.wb.internal.draw2d.EventManager$8.invoke(EventManager.java:325)
+	at com.sun.proxy.$Proxy27.mouseUp(Unknown Source)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:221)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4238)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3817)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.ui.internal.Workbench$$Lambda$14/866379227.run(Unknown Source)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:26:00.224
+!MESSAGE Thread 'Process monitor' tid=1044 (RUNNABLE)
+!STACK 0
+Stack Trace
+	at java.lang.ProcessImpl.waitForInterruptibly(Native Method)
+	at java.lang.ProcessImpl.waitFor(Unknown Source)
+	at org.eclipse.debug.core.model.RuntimeProcess$ProcessMonitorThread.run(RuntimeProcess.java:428)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:26:00.224
+!MESSAGE Thread 'Input Stream Monitor' tid=1043 (WAITING)
+Waiting for: java.lang.Object@442a0134
+!STACK 0
+Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Unknown Source)
+	at org.eclipse.debug.internal.core.InputStreamMonitor.writeNext(InputStreamMonitor.java:156)
+	at org.eclipse.debug.internal.core.InputStreamMonitor.write(InputStreamMonitor.java:125)
+	at org.eclipse.debug.internal.core.InputStreamMonitor$1.run(InputStreamMonitor.java:100)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:26:00.224
+!MESSAGE Thread 'Output Stream Monitor' tid=1042 (RUNNABLE)
+!STACK 0
+Stack Trace
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(Unknown Source)
+	at java.io.BufferedInputStream.read1(Unknown Source)
+	at java.io.BufferedInputStream.read(Unknown Source)
+	at java.io.FilterInputStream.read(Unknown Source)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:147)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.access$1(OutputStreamMonitor.java:137)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor$1.run(OutputStreamMonitor.java:212)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:26:00.224
+!MESSAGE Thread 'Output Stream Monitor' tid=1041 (RUNNABLE)
+!STACK 0
+Stack Trace
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(Unknown Source)
+	at java.io.BufferedInputStream.read1(Unknown Source)
+	at java.io.BufferedInputStream.read(Unknown Source)
+	at java.io.BufferedInputStream.read1(Unknown Source)
+	at java.io.BufferedInputStream.read(Unknown Source)
+	at java.io.FilterInputStream.read(Unknown Source)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:147)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.access$1(OutputStreamMonitor.java:137)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor$1.run(OutputStreamMonitor.java:212)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:26:00.224
+!MESSAGE Thread 'Worker-32' tid=1032 (TIMED_WAITING)
+!STACK 0
+Stack Trace
+	at java.lang.Thread.sleep(Native Method)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager$1ProgressJob.run(JobManager.java:346)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:26:00.224
+!MESSAGE Thread 'org.eclipse.jdt.internal.ui.text.JavaReconciler' tid=647 (TIMED_WAITING)
+Waiting for: org.eclipse.jface.text.reconciler.DirtyRegionQueue@23f6f4a7
+!STACK 0
+Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:180)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:26:00.224
+!MESSAGE Thread 'Worker-27' tid=619 (WAITING)
+Waiting for: org.eclipse.ui.console.IOConsoleInputStream@1ef001b0
+!STACK 0
+Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Unknown Source)
+	at org.eclipse.ui.console.IOConsoleInputStream.waitForData(IOConsoleInputStream.java:151)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:120)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:26:00.224
+!MESSAGE Thread 'com.google.inject.internal.util.$Finalizer' tid=214 (WAITING)
+Waiting for: java.lang.ref.ReferenceQueue$Lock@695f836f
+!STACK 0
+Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at com.google.inject.internal.util.$Finalizer.run(Finalizer.java:114)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:26:00.224
+!MESSAGE Thread 'Thread-8' tid=48 (TIMED_WAITING)
+!STACK 0
+Stack Trace
+	at java.lang.Thread.sleep(Native Method)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:86)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:26:00.224
+!MESSAGE Thread 'org.eclipse.jdt.internal.ui.text.JavaReconciler' tid=33 (TIMED_WAITING)
+Waiting for: org.eclipse.jface.text.reconciler.DirtyRegionQueue@7c3bc4c1
+!STACK 0
+Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:180)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:26:00.224
+!MESSAGE Thread 'Java indexing' tid=31 (WAITING)
+Waiting for: org.eclipse.jdt.internal.core.search.indexing.IndexManager@3dabfb9a
+!STACK 0
+Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Unknown Source)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:373)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:26:00.224
+!MESSAGE Thread 'Thread-3' tid=27 (WAITING)
+Waiting for: java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1b1bea01
+!STACK 0
+Stack Trace
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.park(Unknown Source)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+	at java.util.concurrent.ArrayBlockingQueue.take(Unknown Source)
+	at org.eclipse.equinox.weaving.internal.caching.CacheWriter$1.run(CacheWriter.java:47)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:26:00.224
+!MESSAGE Thread 'EMF Reference Cleaner' tid=23 (WAITING)
+Waiting for: java.lang.ref.ReferenceQueue$Lock@4b3b911a
+!STACK 0
+Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at org.eclipse.emf.common.util.CommonUtil$1ReferenceClearingQueuePollingThread.run(CommonUtil.java:70)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:26:00.224
+!MESSAGE Thread 'Worker-JM' tid=22 (WAITING)
+Waiting for: java.util.ArrayList@292ed4cc
+!STACK 0
+Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.core.internal.jobs.InternalWorker.run(InternalWorker.java:59)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:26:00.224
+!MESSAGE Thread 'SCR Component Actor' tid=21 (WAITING)
+Waiting for: java.util.LinkedList@6da1680a
+!STACK 0
+Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Unknown Source)
+	at org.apache.felix.scr.impl.ComponentActorThread.run(ComponentActorThread.java:80)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:26:00.224
+!MESSAGE Thread 'org.eclipse.jdt.internal.ui.text.JavaReconciler' tid=1047 (TIMED_WAITING)
+Waiting for: org.eclipse.jface.text.reconciler.DirtyRegionQueue@3288a06c
+!STACK 0
+Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:180)
+!SUBENTRY 1 org.eclipse.ui.monitoring 1 0 2018-11-17 12:26:00.224
+!MESSAGE Sample at 12:25:59.094 (+0.820s)
+Thread 'main' tid=1 (RUNNABLE)
+!STACK 0
+Stack Trace
+	at java.util.zip.ZipFile.getNextEntry(Native Method)
+	at java.util.zip.ZipFile.access$500(Unknown Source)
+	at java.util.zip.ZipFile$ZipEntryIterator.next(Unknown Source)
+	at java.util.zip.ZipFile$ZipEntryIterator.nextElement(Unknown Source)
+	at java.util.zip.ZipFile$ZipEntryIterator.nextElement(Unknown Source)
+	at org.eclipse.jdt.internal.core.JarPackageFragmentRoot.computeChildren(JarPackageFragmentRoot.java:134)
+	at org.eclipse.jdt.internal.core.JavaProjectElementInfo.initializePackageNames(JavaProjectElementInfo.java:249)
+	at org.eclipse.jdt.internal.core.JavaProjectElementInfo.getProjectCache(JavaProjectElementInfo.java:221)
+	at org.eclipse.jdt.internal.core.JavaProjectElementInfo.newNameLookup(JavaProjectElementInfo.java:287)
+	at org.eclipse.jdt.internal.core.JavaProject.newNameLookup(JavaProject.java:2622)
+	at org.eclipse.jdt.internal.core.JavaProject.newNameLookup(JavaProject.java:2632)
+	at org.eclipse.jdt.internal.core.JavaProject.findType(JavaProject.java:1614)
+	at org.eclipse.jdt.internal.core.JavaProject.findType(JavaProject.java:1521)
+	at org.eclipse.wb.internal.core.editor.palette.model.entry.LibraryInfo.ensure(LibraryInfo.java:56)
+	at org.eclipse.wb.core.editor.palette.model.entry.ComponentEntryInfo.ensureLibraries(ComponentEntryInfo.java:191)
+	at org.eclipse.wb.core.editor.palette.model.entry.ComponentEntryInfo.createTool(ComponentEntryInfo.java:443)
+	at org.eclipse.wb.core.editor.palette.model.entry.ToolEntryInfo$1.runObject(ToolEntryInfo.java:38)
+	at org.eclipse.wb.core.editor.palette.model.entry.ToolEntryInfo$1.runObject(ToolEntryInfo.java:1)
+	at org.eclipse.wb.internal.core.utils.execution.ExecutionUtils.runObjectLog(ExecutionUtils.java:304)
+	at org.eclipse.wb.core.editor.palette.model.entry.ToolEntryInfo.activate(ToolEntryInfo.java:33)
+	at org.eclipse.wb.internal.core.editor.palette.DesignerPalette$3.activate(DesignerPalette.java:282)
+	at org.eclipse.wb.core.controls.palette.PaletteComposite.selectEntry(PaletteComposite.java:227)
+	at org.eclipse.wb.core.controls.palette.PaletteComposite$EntryFigure$1.mouseUp(PaletteComposite.java:773)
+	at org.eclipse.wb.internal.draw2d.EventManager$2.invokeListener(EventManager.java:249)
+	at org.eclipse.wb.internal.draw2d.EventManager.sendEvent(EventManager.java:205)
+	at org.eclipse.wb.internal.draw2d.EventManager.handleMouseEvent(EventManager.java:191)
+	at org.eclipse.wb.internal.draw2d.EventManager.mouseUp(EventManager.java:180)
+	at sun.reflect.GeneratedMethodAccessor247.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.wb.internal.draw2d.EventManager$8.invoke(EventManager.java:325)
+	at com.sun.proxy.$Proxy27.mouseUp(Unknown Source)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:221)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4238)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3817)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.ui.internal.Workbench$$Lambda$14/866379227.run(Unknown Source)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:26:00.224
+!MESSAGE Thread 'Process monitor' tid=1044 (RUNNABLE)
+!STACK 0
+Stack Trace
+	at java.lang.ProcessImpl.waitForInterruptibly(Native Method)
+	at java.lang.ProcessImpl.waitFor(Unknown Source)
+	at org.eclipse.debug.core.model.RuntimeProcess$ProcessMonitorThread.run(RuntimeProcess.java:428)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:26:00.224
+!MESSAGE Thread 'Input Stream Monitor' tid=1043 (WAITING)
+Waiting for: java.lang.Object@442a0134
+!STACK 0
+Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Unknown Source)
+	at org.eclipse.debug.internal.core.InputStreamMonitor.writeNext(InputStreamMonitor.java:156)
+	at org.eclipse.debug.internal.core.InputStreamMonitor.write(InputStreamMonitor.java:125)
+	at org.eclipse.debug.internal.core.InputStreamMonitor$1.run(InputStreamMonitor.java:100)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:26:00.224
+!MESSAGE Thread 'Output Stream Monitor' tid=1042 (RUNNABLE)
+!STACK 0
+Stack Trace
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(Unknown Source)
+	at java.io.BufferedInputStream.read1(Unknown Source)
+	at java.io.BufferedInputStream.read(Unknown Source)
+	at java.io.FilterInputStream.read(Unknown Source)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:147)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.access$1(OutputStreamMonitor.java:137)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor$1.run(OutputStreamMonitor.java:212)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:26:00.224
+!MESSAGE Thread 'Output Stream Monitor' tid=1041 (RUNNABLE)
+!STACK 0
+Stack Trace
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(Unknown Source)
+	at java.io.BufferedInputStream.read1(Unknown Source)
+	at java.io.BufferedInputStream.read(Unknown Source)
+	at java.io.BufferedInputStream.read1(Unknown Source)
+	at java.io.BufferedInputStream.read(Unknown Source)
+	at java.io.FilterInputStream.read(Unknown Source)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:147)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.access$1(OutputStreamMonitor.java:137)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor$1.run(OutputStreamMonitor.java:212)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:26:00.224
+!MESSAGE Thread 'Worker-31' tid=1031 (TIMED_WAITING)
+!STACK 0
+Stack Trace
+	at java.lang.Thread.sleep(Native Method)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:289)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:26:00.224
+!MESSAGE Thread 'org.eclipse.jdt.internal.ui.text.JavaReconciler' tid=647 (TIMED_WAITING)
+Waiting for: org.eclipse.jface.text.reconciler.DirtyRegionQueue@23f6f4a7
+!STACK 0
+Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:180)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:26:00.224
+!MESSAGE Thread 'Worker-27' tid=619 (WAITING)
+Waiting for: org.eclipse.ui.console.IOConsoleInputStream@1ef001b0
+!STACK 0
+Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Unknown Source)
+	at org.eclipse.ui.console.IOConsoleInputStream.waitForData(IOConsoleInputStream.java:151)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:120)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:26:00.224
+!MESSAGE Thread 'com.google.inject.internal.util.$Finalizer' tid=214 (WAITING)
+Waiting for: java.lang.ref.ReferenceQueue$Lock@695f836f
+!STACK 0
+Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at com.google.inject.internal.util.$Finalizer.run(Finalizer.java:114)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:26:00.224
+!MESSAGE Thread 'Thread-8' tid=48 (TIMED_WAITING)
+!STACK 0
+Stack Trace
+	at java.lang.Thread.sleep(Native Method)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:86)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:26:00.224
+!MESSAGE Thread 'org.eclipse.jdt.internal.ui.text.JavaReconciler' tid=33 (RUNNABLE)
+!STACK 0
+Stack Trace
+	at java.util.zip.ZipFile.getNextEntry(Native Method)
+	at java.util.zip.ZipFile.access$500(Unknown Source)
+	at java.util.zip.ZipFile$ZipEntryIterator.next(Unknown Source)
+	at java.util.zip.ZipFile$ZipEntryIterator.nextElement(Unknown Source)
+	at java.util.zip.ZipFile$ZipEntryIterator.nextElement(Unknown Source)
+	at org.eclipse.jdt.internal.core.JarPackageFragmentRoot.computeChildren(JarPackageFragmentRoot.java:134)
+	at org.eclipse.jdt.internal.core.JavaProjectElementInfo.initializePackageNames(JavaProjectElementInfo.java:249)
+	at org.eclipse.jdt.internal.core.JavaProjectElementInfo.getProjectCache(JavaProjectElementInfo.java:221)
+	at org.eclipse.jdt.internal.core.JavaProjectElementInfo.newNameLookup(JavaProjectElementInfo.java:287)
+	at org.eclipse.jdt.internal.core.JavaProject.newNameLookup(JavaProject.java:2622)
+	at org.eclipse.jdt.internal.core.SearchableEnvironment.<init>(SearchableEnvironment.java:84)
+	at org.eclipse.jdt.internal.core.SearchableEnvironment.<init>(SearchableEnvironment.java:104)
+	at org.eclipse.jdt.internal.core.CancelableNameEnvironment.<init>(CancelableNameEnvironment.java:26)
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder.process_aroundBody0(CompilationUnitProblemFinder.java:183)
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder$AjcClosure1.run(CompilationUnitProblemFinder.java:1)
+	at org.eclipse.contribution.jdt.itdawareness.ITDAwarenessAspect.ajc$around$org_eclipse_contribution_jdt_itdawareness_ITDAwarenessAspect$4$8b05d765proceed(ITDAwarenessAspect.aj:231)
+	at org.eclipse.contribution.jdt.itdawareness.ITDAwarenessAspect.ajc$around$org_eclipse_contribution_jdt_itdawareness_ITDAwarenessAspect$4$8b05d765(ITDAwarenessAspect.aj:244)
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:177)
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:276)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:191)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:90)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:724)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:790)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1260)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:128)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:110)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:90)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:87)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:154)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:89)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:104)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:73)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:26:00.224
+!MESSAGE Thread 'Java indexing' tid=31 (WAITING)
+Waiting for: org.eclipse.jdt.internal.core.search.indexing.IndexManager@3dabfb9a
+!STACK 0
+Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Unknown Source)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:373)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:26:00.224
+!MESSAGE Thread 'Thread-3' tid=27 (WAITING)
+Waiting for: java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1b1bea01
+!STACK 0
+Stack Trace
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.park(Unknown Source)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+	at java.util.concurrent.ArrayBlockingQueue.take(Unknown Source)
+	at org.eclipse.equinox.weaving.internal.caching.CacheWriter$1.run(CacheWriter.java:47)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:26:00.224
+!MESSAGE Thread 'EMF Reference Cleaner' tid=23 (WAITING)
+Waiting for: java.lang.ref.ReferenceQueue$Lock@4b3b911a
+!STACK 0
+Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at org.eclipse.emf.common.util.CommonUtil$1ReferenceClearingQueuePollingThread.run(CommonUtil.java:70)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:26:00.224
+!MESSAGE Thread 'Worker-JM' tid=22 (WAITING)
+Waiting for: java.util.ArrayList@292ed4cc
+!STACK 0
+Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.core.internal.jobs.InternalWorker.run(InternalWorker.java:59)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:26:00.224
+!MESSAGE Thread 'SCR Component Actor' tid=21 (WAITING)
+Waiting for: java.util.LinkedList@6da1680a
+!STACK 0
+Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Unknown Source)
+	at org.apache.felix.scr.impl.ComponentActorThread.run(ComponentActorThread.java:80)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:26:00.224
+!MESSAGE Thread 'org.eclipse.jdt.internal.ui.text.JavaReconciler' tid=1047 (RUNNABLE)
+!STACK 0
+Stack Trace
+	at java.util.zip.ZipFile.getNextEntry(Native Method)
+	at java.util.zip.ZipFile.access$500(Unknown Source)
+	at java.util.zip.ZipFile$ZipEntryIterator.next(Unknown Source)
+	at java.util.zip.ZipFile$ZipEntryIterator.nextElement(Unknown Source)
+	at java.util.zip.ZipFile$ZipEntryIterator.nextElement(Unknown Source)
+	at org.eclipse.jdt.internal.core.JarPackageFragmentRoot.computeChildren(JarPackageFragmentRoot.java:134)
+	at org.eclipse.jdt.internal.core.JavaProjectElementInfo.initializePackageNames(JavaProjectElementInfo.java:249)
+	at org.eclipse.jdt.internal.core.JavaProjectElementInfo.getProjectCache(JavaProjectElementInfo.java:221)
+	at org.eclipse.jdt.internal.core.JavaProjectElementInfo.newNameLookup(JavaProjectElementInfo.java:287)
+	at org.eclipse.jdt.internal.core.JavaProject.newNameLookup(JavaProject.java:2622)
+	at org.eclipse.jdt.internal.core.SearchableEnvironment.<init>(SearchableEnvironment.java:84)
+	at org.eclipse.jdt.internal.core.SearchableEnvironment.<init>(SearchableEnvironment.java:104)
+	at org.eclipse.jdt.internal.core.CancelableNameEnvironment.<init>(CancelableNameEnvironment.java:26)
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder.process_aroundBody0(CompilationUnitProblemFinder.java:183)
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder$AjcClosure1.run(CompilationUnitProblemFinder.java:1)
+	at org.eclipse.contribution.jdt.itdawareness.ITDAwarenessAspect.ajc$around$org_eclipse_contribution_jdt_itdawareness_ITDAwarenessAspect$4$8b05d765proceed(ITDAwarenessAspect.aj:231)
+	at org.eclipse.contribution.jdt.itdawareness.ITDAwarenessAspect.ajc$around$org_eclipse_contribution_jdt_itdawareness_ITDAwarenessAspect$4$8b05d765(ITDAwarenessAspect.aj:244)
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:177)
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:276)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:191)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:90)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:724)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:790)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1260)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:128)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:110)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:90)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:87)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:154)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:89)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:104)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:73)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+!SUBENTRY 1 org.eclipse.ui.monitoring 1 0 2018-11-17 12:26:00.224
+!MESSAGE Sample at 12:25:59.756 (+0.662s)
+Thread 'main' tid=1 (RUNNABLE)
+!STACK 0
+Stack Trace
+	at java.util.zip.ZipFile.getNextEntry(Native Method)
+	at java.util.zip.ZipFile.access$500(Unknown Source)
+	at java.util.zip.ZipFile$ZipEntryIterator.next(Unknown Source)
+	at java.util.zip.ZipFile$ZipEntryIterator.nextElement(Unknown Source)
+	at java.util.zip.ZipFile$ZipEntryIterator.nextElement(Unknown Source)
+	at org.eclipse.jdt.internal.core.JarPackageFragmentRoot.computeChildren(JarPackageFragmentRoot.java:134)
+	at org.eclipse.jdt.internal.core.JavaProjectElementInfo.initializePackageNames(JavaProjectElementInfo.java:249)
+	at org.eclipse.jdt.internal.core.JavaProjectElementInfo.getProjectCache(JavaProjectElementInfo.java:221)
+	at org.eclipse.jdt.internal.core.JavaProjectElementInfo.newNameLookup(JavaProjectElementInfo.java:287)
+	at org.eclipse.jdt.internal.core.JavaProject.newNameLookup(JavaProject.java:2622)
+	at org.eclipse.jdt.internal.core.JavaProject.newNameLookup(JavaProject.java:2632)
+	at org.eclipse.jdt.internal.core.JavaProject.findType(JavaProject.java:1614)
+	at org.eclipse.jdt.internal.core.JavaProject.findType(JavaProject.java:1521)
+	at org.eclipse.wb.internal.core.editor.palette.model.entry.LibraryInfo.ensure(LibraryInfo.java:56)
+	at org.eclipse.wb.core.editor.palette.model.entry.ComponentEntryInfo.ensureLibraries(ComponentEntryInfo.java:191)
+	at org.eclipse.wb.core.editor.palette.model.entry.ComponentEntryInfo.createTool(ComponentEntryInfo.java:443)
+	at org.eclipse.wb.core.editor.palette.model.entry.ToolEntryInfo$1.runObject(ToolEntryInfo.java:38)
+	at org.eclipse.wb.core.editor.palette.model.entry.ToolEntryInfo$1.runObject(ToolEntryInfo.java:1)
+	at org.eclipse.wb.internal.core.utils.execution.ExecutionUtils.runObjectLog(ExecutionUtils.java:304)
+	at org.eclipse.wb.core.editor.palette.model.entry.ToolEntryInfo.activate(ToolEntryInfo.java:33)
+	at org.eclipse.wb.internal.core.editor.palette.DesignerPalette$3.activate(DesignerPalette.java:282)
+	at org.eclipse.wb.core.controls.palette.PaletteComposite.selectEntry(PaletteComposite.java:227)
+	at org.eclipse.wb.core.controls.palette.PaletteComposite$EntryFigure$1.mouseUp(PaletteComposite.java:773)
+	at org.eclipse.wb.internal.draw2d.EventManager$2.invokeListener(EventManager.java:249)
+	at org.eclipse.wb.internal.draw2d.EventManager.sendEvent(EventManager.java:205)
+	at org.eclipse.wb.internal.draw2d.EventManager.handleMouseEvent(EventManager.java:191)
+	at org.eclipse.wb.internal.draw2d.EventManager.mouseUp(EventManager.java:180)
+	at sun.reflect.GeneratedMethodAccessor247.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.wb.internal.draw2d.EventManager$8.invoke(EventManager.java:325)
+	at com.sun.proxy.$Proxy27.mouseUp(Unknown Source)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:221)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4238)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3817)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.ui.internal.Workbench$$Lambda$14/866379227.run(Unknown Source)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:26:00.224
+!MESSAGE Thread 'Process monitor' tid=1044 (RUNNABLE)
+!STACK 0
+Stack Trace
+	at java.lang.ProcessImpl.waitForInterruptibly(Native Method)
+	at java.lang.ProcessImpl.waitFor(Unknown Source)
+	at org.eclipse.debug.core.model.RuntimeProcess$ProcessMonitorThread.run(RuntimeProcess.java:428)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:26:00.224
+!MESSAGE Thread 'Input Stream Monitor' tid=1043 (WAITING)
+Waiting for: java.lang.Object@442a0134
+!STACK 0
+Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Unknown Source)
+	at org.eclipse.debug.internal.core.InputStreamMonitor.writeNext(InputStreamMonitor.java:156)
+	at org.eclipse.debug.internal.core.InputStreamMonitor.write(InputStreamMonitor.java:125)
+	at org.eclipse.debug.internal.core.InputStreamMonitor$1.run(InputStreamMonitor.java:100)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:26:00.224
+!MESSAGE Thread 'Output Stream Monitor' tid=1042 (RUNNABLE)
+!STACK 0
+Stack Trace
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(Unknown Source)
+	at java.io.BufferedInputStream.read1(Unknown Source)
+	at java.io.BufferedInputStream.read(Unknown Source)
+	at java.io.FilterInputStream.read(Unknown Source)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:147)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.access$1(OutputStreamMonitor.java:137)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor$1.run(OutputStreamMonitor.java:212)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:26:00.224
+!MESSAGE Thread 'Output Stream Monitor' tid=1041 (RUNNABLE)
+!STACK 0
+Stack Trace
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(Unknown Source)
+	at java.io.BufferedInputStream.read1(Unknown Source)
+	at java.io.BufferedInputStream.read(Unknown Source)
+	at java.io.BufferedInputStream.read1(Unknown Source)
+	at java.io.BufferedInputStream.read(Unknown Source)
+	at java.io.FilterInputStream.read(Unknown Source)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:147)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.access$1(OutputStreamMonitor.java:137)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor$1.run(OutputStreamMonitor.java:212)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:26:00.224
+!MESSAGE Thread 'Worker-31' tid=1031 (TIMED_WAITING)
+!STACK 0
+Stack Trace
+	at java.lang.Thread.sleep(Native Method)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:289)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:26:00.224
+!MESSAGE Thread 'org.eclipse.jdt.internal.ui.text.JavaReconciler' tid=647 (TIMED_WAITING)
+Waiting for: org.eclipse.jface.text.reconciler.DirtyRegionQueue@23f6f4a7
+!STACK 0
+Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:180)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:26:00.224
+!MESSAGE Thread 'Worker-27' tid=619 (WAITING)
+Waiting for: org.eclipse.ui.console.IOConsoleInputStream@1ef001b0
+!STACK 0
+Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Unknown Source)
+	at org.eclipse.ui.console.IOConsoleInputStream.waitForData(IOConsoleInputStream.java:151)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:120)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:26:00.224
+!MESSAGE Thread 'com.google.inject.internal.util.$Finalizer' tid=214 (WAITING)
+Waiting for: java.lang.ref.ReferenceQueue$Lock@695f836f
+!STACK 0
+Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at com.google.inject.internal.util.$Finalizer.run(Finalizer.java:114)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:26:00.224
+!MESSAGE Thread 'Thread-8' tid=48 (TIMED_WAITING)
+!STACK 0
+Stack Trace
+	at java.lang.Thread.sleep(Native Method)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:86)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:26:00.224
+!MESSAGE Thread 'org.eclipse.jdt.internal.ui.text.JavaReconciler' tid=33 (RUNNABLE)
+!STACK 0
+Stack Trace
+	at java.util.zip.ZipFile.getNextEntry(Native Method)
+	at java.util.zip.ZipFile.access$500(Unknown Source)
+	at java.util.zip.ZipFile$ZipEntryIterator.next(Unknown Source)
+	at java.util.zip.ZipFile$ZipEntryIterator.nextElement(Unknown Source)
+	at java.util.zip.ZipFile$ZipEntryIterator.nextElement(Unknown Source)
+	at org.eclipse.jdt.internal.core.JarPackageFragmentRoot.computeChildren(JarPackageFragmentRoot.java:134)
+	at org.eclipse.jdt.internal.core.JavaProjectElementInfo.initializePackageNames(JavaProjectElementInfo.java:249)
+	at org.eclipse.jdt.internal.core.JavaProjectElementInfo.getProjectCache(JavaProjectElementInfo.java:221)
+	at org.eclipse.jdt.internal.core.JavaProjectElementInfo.newNameLookup(JavaProjectElementInfo.java:287)
+	at org.eclipse.jdt.internal.core.JavaProject.newNameLookup(JavaProject.java:2622)
+	at org.eclipse.jdt.internal.core.SearchableEnvironment.<init>(SearchableEnvironment.java:84)
+	at org.eclipse.jdt.internal.core.SearchableEnvironment.<init>(SearchableEnvironment.java:104)
+	at org.eclipse.jdt.internal.core.CancelableNameEnvironment.<init>(CancelableNameEnvironment.java:26)
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder.process_aroundBody0(CompilationUnitProblemFinder.java:183)
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder$AjcClosure1.run(CompilationUnitProblemFinder.java:1)
+	at org.eclipse.contribution.jdt.itdawareness.ITDAwarenessAspect.ajc$around$org_eclipse_contribution_jdt_itdawareness_ITDAwarenessAspect$4$8b05d765proceed(ITDAwarenessAspect.aj:231)
+	at org.eclipse.contribution.jdt.itdawareness.ITDAwarenessAspect.ajc$around$org_eclipse_contribution_jdt_itdawareness_ITDAwarenessAspect$4$8b05d765(ITDAwarenessAspect.aj:244)
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:177)
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:276)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:191)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:90)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:724)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:790)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1260)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:128)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:110)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:90)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:87)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:154)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:89)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:104)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:73)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:26:00.224
+!MESSAGE Thread 'Java indexing' tid=31 (WAITING)
+Waiting for: org.eclipse.jdt.internal.core.search.indexing.IndexManager@3dabfb9a
+!STACK 0
+Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Unknown Source)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:373)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:26:00.224
+!MESSAGE Thread 'Thread-3' tid=27 (WAITING)
+Waiting for: java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1b1bea01
+!STACK 0
+Stack Trace
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.park(Unknown Source)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+	at java.util.concurrent.ArrayBlockingQueue.take(Unknown Source)
+	at org.eclipse.equinox.weaving.internal.caching.CacheWriter$1.run(CacheWriter.java:47)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:26:00.224
+!MESSAGE Thread 'EMF Reference Cleaner' tid=23 (WAITING)
+Waiting for: java.lang.ref.ReferenceQueue$Lock@4b3b911a
+!STACK 0
+Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at org.eclipse.emf.common.util.CommonUtil$1ReferenceClearingQueuePollingThread.run(CommonUtil.java:70)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:26:00.224
+!MESSAGE Thread 'Worker-JM' tid=22 (WAITING)
+Waiting for: java.util.ArrayList@292ed4cc
+!STACK 0
+Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.core.internal.jobs.InternalWorker.run(InternalWorker.java:59)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:26:00.224
+!MESSAGE Thread 'SCR Component Actor' tid=21 (WAITING)
+Waiting for: java.util.LinkedList@6da1680a
+!STACK 0
+Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Unknown Source)
+	at org.apache.felix.scr.impl.ComponentActorThread.run(ComponentActorThread.java:80)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:26:00.224
+!MESSAGE Thread 'org.eclipse.jdt.internal.ui.text.JavaReconciler' tid=1047 (RUNNABLE)
+!STACK 0
+Stack Trace
+	at java.util.zip.ZipFile.freeEntry(Native Method)
+	at java.util.zip.ZipFile.access$1000(Unknown Source)
+	at java.util.zip.ZipFile$ZipEntryIterator.next(Unknown Source)
+	at java.util.zip.ZipFile$ZipEntryIterator.nextElement(Unknown Source)
+	at java.util.zip.ZipFile$ZipEntryIterator.nextElement(Unknown Source)
+	at org.eclipse.jdt.internal.core.JarPackageFragmentRoot.computeChildren(JarPackageFragmentRoot.java:134)
+	at org.eclipse.jdt.internal.core.JavaProjectElementInfo.initializePackageNames(JavaProjectElementInfo.java:249)
+	at org.eclipse.jdt.internal.core.JavaProjectElementInfo.getProjectCache(JavaProjectElementInfo.java:221)
+	at org.eclipse.jdt.internal.core.JavaProjectElementInfo.newNameLookup(JavaProjectElementInfo.java:287)
+	at org.eclipse.jdt.internal.core.JavaProject.newNameLookup(JavaProject.java:2622)
+	at org.eclipse.jdt.internal.core.SearchableEnvironment.<init>(SearchableEnvironment.java:84)
+	at org.eclipse.jdt.internal.core.SearchableEnvironment.<init>(SearchableEnvironment.java:104)
+	at org.eclipse.jdt.internal.core.CancelableNameEnvironment.<init>(CancelableNameEnvironment.java:26)
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder.process_aroundBody0(CompilationUnitProblemFinder.java:183)
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder$AjcClosure1.run(CompilationUnitProblemFinder.java:1)
+	at org.eclipse.contribution.jdt.itdawareness.ITDAwarenessAspect.ajc$around$org_eclipse_contribution_jdt_itdawareness_ITDAwarenessAspect$4$8b05d765proceed(ITDAwarenessAspect.aj:231)
+	at org.eclipse.contribution.jdt.itdawareness.ITDAwarenessAspect.ajc$around$org_eclipse_contribution_jdt_itdawareness_ITDAwarenessAspect$4$8b05d765(ITDAwarenessAspect.aj:244)
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:177)
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:276)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:191)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:90)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:724)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:790)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1260)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:128)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:110)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:90)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:87)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:154)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:89)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:104)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:73)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.ui.monitoring 2 0 2018-11-17 12:32:59.800
+!MESSAGE UI freeze of 0.61s at 12:32:59.191
+
+!ENTRY org.eclipse.ui.monitoring 4 0 2018-11-17 12:40:42.009
+!MESSAGE UI freeze of 1.6s at 12:40:40.410
+!SUBENTRY 1 org.eclipse.ui.monitoring 1 0 2018-11-17 12:40:42.009
+!MESSAGE Sample at 12:40:40.755 (+0.345s)
+Thread 'main' tid=1 (WAITING)
+!STACK 0
+Stack Trace
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.park(Unknown Source)
+	at java.util.concurrent.FutureTask.awaitDone(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at sun.awt.shell.Win32ShellFolderManager2$ComInvoker.invoke(Unknown Source)
+	at sun.awt.shell.ShellFolder.invoke(Unknown Source)
+	at sun.awt.shell.Win32ShellFolder2.getFileSystemPath(Unknown Source)
+	at sun.awt.shell.Win32ShellFolderManager2.getRecent(Unknown Source)
+	at sun.awt.shell.Win32ShellFolderManager2.get(Unknown Source)
+	at sun.awt.shell.ShellFolder.get(Unknown Source)
+	at sun.swing.WindowsPlacesBar.<init>(Unknown Source)
+	at com.sun.java.swing.plaf.windows.WindowsFileChooserUI.updateUseShellFolder(Unknown Source)
+	at com.sun.java.swing.plaf.windows.WindowsFileChooserUI.installComponents(Unknown Source)
+	at javax.swing.plaf.basic.BasicFileChooserUI.installUI(Unknown Source)
+	at com.sun.java.swing.plaf.windows.WindowsFileChooserUI.installUI(Unknown Source)
+	at javax.swing.JComponent.setUI(Unknown Source)
+	at javax.swing.JFileChooser.updateUI(Unknown Source)
+	at javax.swing.JFileChooser.setup(Unknown Source)
+	at javax.swing.JFileChooser.<init>(Unknown Source)
+	at javax.swing.JFileChooser.<init>(Unknown Source)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.eclipse.wb.internal.swing.model.component.SwingInvocationEvaluatorInterceptor.evaluateSwing(SwingInvocationEvaluatorInterceptor.java:73)
+	at org.eclipse.wb.internal.swing.model.component.SwingInvocationEvaluatorInterceptor.evaluate(SwingInvocationEvaluatorInterceptor.java:59)
+	at org.eclipse.wb.internal.core.eval.evaluators.InvocationEvaluator.tryInterceptors(InvocationEvaluator.java:378)
+	at org.eclipse.wb.internal.core.eval.evaluators.InvocationEvaluator.evaluate(InvocationEvaluator.java:255)
+	at org.eclipse.wb.internal.core.eval.evaluators.InvocationEvaluator.evaluate(InvocationEvaluator.java:81)
+	at org.eclipse.wb.core.eval.AstEvaluationEngine.evaluate0(AstEvaluationEngine.java:177)
+	at org.eclipse.wb.core.eval.AstEvaluationEngine.evaluate(AstEvaluationEngine.java:61)
+	at org.eclipse.wb.internal.core.model.JavaInfoEvaluationHelper.evaluateExpression(JavaInfoEvaluationHelper.java:630)
+	at org.eclipse.wb.internal.core.model.JavaInfoEvaluationHelper.evaluate(JavaInfoEvaluationHelper.java:502)
+	at org.eclipse.wb.internal.core.parser.JavaInfoParser.evaluateNode(JavaInfoParser.java:1309)
+	at org.eclipse.wb.internal.core.parser.JavaInfoParser.access$1(JavaInfoParser.java:1300)
+	at org.eclipse.wb.internal.core.parser.JavaInfoParser$ExecutionFlowParseVisitor$3.run(JavaInfoParser.java:602)
+	at org.eclipse.wb.internal.core.utils.execution.ExecutionUtils.runRethrow(ExecutionUtils.java:119)
+	at org.eclipse.wb.internal.core.parser.JavaInfoParser$ExecutionFlowParseVisitor.postVisit(JavaInfoParser.java:592)
+	at sun.reflect.GeneratedMethodAccessor169.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.wb.core.eval.ExecutionFlowUtils$1.intercept(ExecutionFlowUtils.java:399)
+	at org.eclipse.jdt.core.dom.ASTVisitor$$EnhancerByCGLIB$$c7d6b5c4.postVisit(<generated>)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2814)
+	at org.eclipse.jdt.core.dom.ASTNode.acceptChild(ASTNode.java:2859)
+	at org.eclipse.jdt.core.dom.Assignment.accept0(Assignment.java:313)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2811)
+	at org.eclipse.jdt.core.dom.ASTNode.acceptChild(ASTNode.java:2859)
+	at org.eclipse.jdt.core.dom.ExpressionStatement.accept0(ExpressionStatement.java:145)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2811)
+	at org.eclipse.wb.core.eval.ExecutionFlowUtils.visitStatement0(ExecutionFlowUtils.java:354)
+	at org.eclipse.wb.core.eval.ExecutionFlowUtils.visitStatement(ExecutionFlowUtils.java:315)
+	at org.eclipse.wb.core.eval.ExecutionFlowUtils.visitStatement0(ExecutionFlowUtils.java:336)
+	at org.eclipse.wb.core.eval.ExecutionFlowUtils.visitStatement(ExecutionFlowUtils.java:315)
+	at org.eclipse.wb.core.eval.ExecutionFlowUtils.visit(ExecutionFlowUtils.java:247)
+	at org.eclipse.wb.core.eval.ExecutionFlowUtils.visit(ExecutionFlowUtils.java:228)
+	at org.eclipse.wb.core.eval.ExecutionFlowUtils.visit(ExecutionFlowUtils.java:191)
+	at org.eclipse.wb.internal.core.parser.JavaInfoParser.parseRootMethods(JavaInfoParser.java:312)
+	at org.eclipse.wb.internal.core.parser.JavaInfoParser.parse(JavaInfoParser.java:268)
+	at org.eclipse.wb.internal.core.parser.JavaInfoParser.access$9(JavaInfoParser.java:238)
+	at org.eclipse.wb.internal.core.parser.JavaInfoParser$1.runObject(JavaInfoParser.java:153)
+	at org.eclipse.wb.internal.core.parser.JavaInfoParser$1.runObject(JavaInfoParser.java:1)
+	at org.eclipse.wb.internal.core.utils.execution.ExecutionUtils.runDesignTime(ExecutionUtils.java:159)
+	at org.eclipse.wb.internal.core.parser.JavaInfoParser.parse(JavaInfoParser.java:151)
+	at org.eclipse.wb.internal.core.editor.DesignPage.internal_refreshGEF(DesignPage.java:534)
+	at org.eclipse.wb.internal.core.editor.DesignPage.access$9(DesignPage.java:522)
+	at org.eclipse.wb.internal.core.editor.DesignPage$8$1.run(DesignPage.java:449)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:233)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:144)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4889)
+	at org.eclipse.wb.internal.core.editor.DesignPage$8.run(DesignPage.java:446)
+	at org.eclipse.jface.operation.ModalContext.runInCurrentThread(ModalContext.java:437)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:353)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.run(ProgressMonitorDialog.java:483)
+	at org.eclipse.wb.internal.core.editor.DesignPage.internal_refreshGEF_withProgress(DesignPage.java:465)
+	at org.eclipse.wb.internal.core.editor.DesignPage.internal_refreshGEF(DesignPage.java:415)
+	at org.eclipse.wb.internal.core.editor.UndoManager.refreshDesignerEditor(UndoManager.java:381)
+	at org.eclipse.wb.internal.core.editor.UndoManager.activate(UndoManager.java:90)
+	at org.eclipse.wb.internal.core.editor.DesignPage$1$1.run(DesignPage.java:107)
+	at org.eclipse.wb.internal.core.utils.execution.ExecutionUtils.runLog(ExecutionUtils.java:106)
+	at org.eclipse.wb.internal.core.utils.execution.ExecutionUtils$4.run(ExecutionUtils.java:203)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:37)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:182)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4213)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3820)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.ui.internal.Workbench$$Lambda$14/866379227.run(Unknown Source)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+!SUBENTRY 1 org.eclipse.ui.monitoring 1 0 2018-11-17 12:40:42.009
+!MESSAGE Sample at 12:40:41.493 (+0.738s)
+Thread 'main' tid=1 (WAITING)
+!STACK 0
+Stack Trace
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.park(Unknown Source)
+	at java.util.concurrent.FutureTask.awaitDone(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at sun.awt.shell.Win32ShellFolderManager2$ComInvoker.invoke(Unknown Source)
+	at sun.awt.shell.ShellFolder.invoke(Unknown Source)
+	at sun.awt.shell.ShellFolder.invoke(Unknown Source)
+	at sun.awt.shell.Win32ShellFolder2.hasAttribute(Unknown Source)
+	at sun.awt.shell.Win32ShellFolder2.isDirectory(Unknown Source)
+	at sun.awt.shell.Win32ShellFolderManager2.get(Unknown Source)
+	at sun.awt.shell.ShellFolder.get(Unknown Source)
+	at com.sun.java.swing.plaf.windows.WindowsFileChooserUI$DirectoryComboBoxModel.addItem(Unknown Source)
+	at com.sun.java.swing.plaf.windows.WindowsFileChooserUI$DirectoryComboBoxModel.access$800(Unknown Source)
+	at com.sun.java.swing.plaf.windows.WindowsFileChooserUI.doDirectoryChanged(Unknown Source)
+	at com.sun.java.swing.plaf.windows.WindowsFileChooserUI.access$1100(Unknown Source)
+	at com.sun.java.swing.plaf.windows.WindowsFileChooserUI$11.propertyChange(Unknown Source)
+	at java.beans.PropertyChangeSupport.fire(Unknown Source)
+	at java.beans.PropertyChangeSupport.firePropertyChange(Unknown Source)
+	at java.beans.PropertyChangeSupport.firePropertyChange(Unknown Source)
+	at java.awt.Component.firePropertyChange(Unknown Source)
+	at javax.swing.JFileChooser.setCurrentDirectory(Unknown Source)
+	at javax.swing.JFileChooser.<init>(Unknown Source)
+	at javax.swing.JFileChooser.<init>(Unknown Source)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.eclipse.wb.internal.swing.model.component.SwingInvocationEvaluatorInterceptor.evaluateSwing(SwingInvocationEvaluatorInterceptor.java:73)
+	at org.eclipse.wb.internal.swing.model.component.SwingInvocationEvaluatorInterceptor.evaluate(SwingInvocationEvaluatorInterceptor.java:59)
+	at org.eclipse.wb.internal.core.eval.evaluators.InvocationEvaluator.tryInterceptors(InvocationEvaluator.java:378)
+	at org.eclipse.wb.internal.core.eval.evaluators.InvocationEvaluator.evaluate(InvocationEvaluator.java:255)
+	at org.eclipse.wb.internal.core.eval.evaluators.InvocationEvaluator.evaluate(InvocationEvaluator.java:81)
+	at org.eclipse.wb.core.eval.AstEvaluationEngine.evaluate0(AstEvaluationEngine.java:177)
+	at org.eclipse.wb.core.eval.AstEvaluationEngine.evaluate(AstEvaluationEngine.java:61)
+	at org.eclipse.wb.internal.core.model.JavaInfoEvaluationHelper.evaluateExpression(JavaInfoEvaluationHelper.java:630)
+	at org.eclipse.wb.internal.core.model.JavaInfoEvaluationHelper.evaluate(JavaInfoEvaluationHelper.java:502)
+	at org.eclipse.wb.internal.core.parser.JavaInfoParser.evaluateNode(JavaInfoParser.java:1309)
+	at org.eclipse.wb.internal.core.parser.JavaInfoParser.access$1(JavaInfoParser.java:1300)
+	at org.eclipse.wb.internal.core.parser.JavaInfoParser$ExecutionFlowParseVisitor$3.run(JavaInfoParser.java:602)
+	at org.eclipse.wb.internal.core.utils.execution.ExecutionUtils.runRethrow(ExecutionUtils.java:119)
+	at org.eclipse.wb.internal.core.parser.JavaInfoParser$ExecutionFlowParseVisitor.postVisit(JavaInfoParser.java:592)
+	at sun.reflect.GeneratedMethodAccessor169.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.wb.core.eval.ExecutionFlowUtils$1.intercept(ExecutionFlowUtils.java:399)
+	at org.eclipse.jdt.core.dom.ASTVisitor$$EnhancerByCGLIB$$c7d6b5c4.postVisit(<generated>)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2814)
+	at org.eclipse.jdt.core.dom.ASTNode.acceptChild(ASTNode.java:2859)
+	at org.eclipse.jdt.core.dom.Assignment.accept0(Assignment.java:313)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2811)
+	at org.eclipse.jdt.core.dom.ASTNode.acceptChild(ASTNode.java:2859)
+	at org.eclipse.jdt.core.dom.ExpressionStatement.accept0(ExpressionStatement.java:145)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2811)
+	at org.eclipse.wb.core.eval.ExecutionFlowUtils.visitStatement0(ExecutionFlowUtils.java:354)
+	at org.eclipse.wb.core.eval.ExecutionFlowUtils.visitStatement(ExecutionFlowUtils.java:315)
+	at org.eclipse.wb.core.eval.ExecutionFlowUtils.visitStatement0(ExecutionFlowUtils.java:336)
+	at org.eclipse.wb.core.eval.ExecutionFlowUtils.visitStatement(ExecutionFlowUtils.java:315)
+	at org.eclipse.wb.core.eval.ExecutionFlowUtils.visit(ExecutionFlowUtils.java:247)
+	at org.eclipse.wb.core.eval.ExecutionFlowUtils.visit(ExecutionFlowUtils.java:228)
+	at org.eclipse.wb.core.eval.ExecutionFlowUtils.visit(ExecutionFlowUtils.java:191)
+	at org.eclipse.wb.internal.core.parser.JavaInfoParser.parseRootMethods(JavaInfoParser.java:312)
+	at org.eclipse.wb.internal.core.parser.JavaInfoParser.parse(JavaInfoParser.java:268)
+	at org.eclipse.wb.internal.core.parser.JavaInfoParser.access$9(JavaInfoParser.java:238)
+	at org.eclipse.wb.internal.core.parser.JavaInfoParser$1.runObject(JavaInfoParser.java:153)
+	at org.eclipse.wb.internal.core.parser.JavaInfoParser$1.runObject(JavaInfoParser.java:1)
+	at org.eclipse.wb.internal.core.utils.execution.ExecutionUtils.runDesignTime(ExecutionUtils.java:159)
+	at org.eclipse.wb.internal.core.parser.JavaInfoParser.parse(JavaInfoParser.java:151)
+	at org.eclipse.wb.internal.core.editor.DesignPage.internal_refreshGEF(DesignPage.java:534)
+	at org.eclipse.wb.internal.core.editor.DesignPage.access$9(DesignPage.java:522)
+	at org.eclipse.wb.internal.core.editor.DesignPage$8$1.run(DesignPage.java:449)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:233)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:144)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4889)
+	at org.eclipse.wb.internal.core.editor.DesignPage$8.run(DesignPage.java:446)
+	at org.eclipse.jface.operation.ModalContext.runInCurrentThread(ModalContext.java:437)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:353)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.run(ProgressMonitorDialog.java:483)
+	at org.eclipse.wb.internal.core.editor.DesignPage.internal_refreshGEF_withProgress(DesignPage.java:465)
+	at org.eclipse.wb.internal.core.editor.DesignPage.internal_refreshGEF(DesignPage.java:415)
+	at org.eclipse.wb.internal.core.editor.UndoManager.refreshDesignerEditor(UndoManager.java:381)
+	at org.eclipse.wb.internal.core.editor.UndoManager.activate(UndoManager.java:90)
+	at org.eclipse.wb.internal.core.editor.DesignPage$1$1.run(DesignPage.java:107)
+	at org.eclipse.wb.internal.core.utils.execution.ExecutionUtils.runLog(ExecutionUtils.java:106)
+	at org.eclipse.wb.internal.core.utils.execution.ExecutionUtils$4.run(ExecutionUtils.java:203)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:37)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:182)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4213)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3820)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.ui.internal.Workbench$$Lambda$14/866379227.run(Unknown Source)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:40:42.009
+!MESSAGE Thread 'Input Stream Monitor' tid=1863 (WAITING)
+Waiting for: java.lang.Object@1c2a2cca
+!STACK 0
+Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Unknown Source)
+	at org.eclipse.debug.internal.core.InputStreamMonitor.writeNext(InputStreamMonitor.java:156)
+	at org.eclipse.debug.internal.core.InputStreamMonitor.write(InputStreamMonitor.java:125)
+	at org.eclipse.debug.internal.core.InputStreamMonitor$1.run(InputStreamMonitor.java:100)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:40:42.009
+!MESSAGE Thread 'Output Stream Monitor' tid=1862 (RUNNABLE)
+!STACK 0
+Stack Trace
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(Unknown Source)
+	at java.io.BufferedInputStream.read1(Unknown Source)
+	at java.io.BufferedInputStream.read(Unknown Source)
+	at java.io.FilterInputStream.read(Unknown Source)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:147)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.access$1(OutputStreamMonitor.java:137)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor$1.run(OutputStreamMonitor.java:212)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:40:42.009
+!MESSAGE Thread 'Output Stream Monitor' tid=1861 (RUNNABLE)
+!STACK 0
+Stack Trace
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(Unknown Source)
+	at java.io.BufferedInputStream.read1(Unknown Source)
+	at java.io.BufferedInputStream.read(Unknown Source)
+	at java.io.BufferedInputStream.read1(Unknown Source)
+	at java.io.BufferedInputStream.read(Unknown Source)
+	at java.io.FilterInputStream.read(Unknown Source)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:147)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.access$1(OutputStreamMonitor.java:137)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor$1.run(OutputStreamMonitor.java:212)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:40:42.013
+!MESSAGE Thread 'Worker-35' tid=1662 (WAITING)
+Waiting for: org.eclipse.ui.console.IOConsoleInputStream@29a3468a
+!STACK 0
+Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Unknown Source)
+	at org.eclipse.ui.console.IOConsoleInputStream.waitForData(IOConsoleInputStream.java:151)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:120)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:40:42.013
+!MESSAGE Thread 'org.eclipse.jdt.internal.ui.text.JavaReconciler' tid=1047 (TIMED_WAITING)
+Waiting for: org.eclipse.jface.text.reconciler.DirtyRegionQueue@3288a06c
+!STACK 0
+Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:180)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:40:42.013
+!MESSAGE Thread 'com.google.inject.internal.util.$Finalizer' tid=214 (WAITING)
+Waiting for: java.lang.ref.ReferenceQueue$Lock@695f836f
+!STACK 0
+Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at com.google.inject.internal.util.$Finalizer.run(Finalizer.java:114)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:40:42.013
+!MESSAGE Thread 'Thread-8' tid=48 (TIMED_WAITING)
+!STACK 0
+Stack Trace
+	at java.lang.Thread.sleep(Native Method)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:86)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:40:42.013
+!MESSAGE Thread 'org.eclipse.jdt.internal.ui.text.JavaReconciler' tid=33 (TIMED_WAITING)
+Waiting for: org.eclipse.jface.text.reconciler.DirtyRegionQueue@7c3bc4c1
+!STACK 0
+Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:180)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:40:42.013
+!MESSAGE Thread 'Java indexing' tid=31 (WAITING)
+Waiting for: org.eclipse.jdt.internal.core.search.indexing.IndexManager@3dabfb9a
+!STACK 0
+Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Unknown Source)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:373)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:40:42.013
+!MESSAGE Thread 'Thread-3' tid=27 (WAITING)
+Waiting for: java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1b1bea01
+!STACK 0
+Stack Trace
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.park(Unknown Source)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+	at java.util.concurrent.ArrayBlockingQueue.take(Unknown Source)
+	at org.eclipse.equinox.weaving.internal.caching.CacheWriter$1.run(CacheWriter.java:47)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:40:42.013
+!MESSAGE Thread 'EMF Reference Cleaner' tid=23 (WAITING)
+Waiting for: java.lang.ref.ReferenceQueue$Lock@4b3b911a
+!STACK 0
+Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at org.eclipse.emf.common.util.CommonUtil$1ReferenceClearingQueuePollingThread.run(CommonUtil.java:70)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:40:42.013
+!MESSAGE Thread 'Worker-JM' tid=22 (WAITING)
+Waiting for: java.util.ArrayList@292ed4cc
+!STACK 0
+Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.core.internal.jobs.InternalWorker.run(InternalWorker.java:59)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:40:42.013
+!MESSAGE Thread 'SCR Component Actor' tid=21 (WAITING)
+Waiting for: java.util.LinkedList@6da1680a
+!STACK 0
+Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Unknown Source)
+	at org.apache.felix.scr.impl.ComponentActorThread.run(ComponentActorThread.java:80)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2018-11-17 12:40:42.013
+!MESSAGE Thread 'Process monitor' tid=1864 (RUNNABLE)
+!STACK 0
+Stack Trace
+	at java.lang.ProcessImpl.waitForInterruptibly(Native Method)
+	at java.lang.ProcessImpl.waitFor(Unknown Source)
+	at org.eclipse.debug.core.model.RuntimeProcess$ProcessMonitorThread.run(RuntimeProcess.java:428)
