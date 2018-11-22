@@ -1,4 +1,4 @@
-# Pharmhackathon2018
+# Pharmhackathon2018, 2nd Place Finish
 
 This project was completed coded in Java as a submission for Pharmhackathon 2018. 
 The time frame for creation was from 11am-8pm on 17-11-2018
