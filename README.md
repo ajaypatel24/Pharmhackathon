@@ -32,5 +32,5 @@ it is considered a potential mutation of interest and it's index (ie i-th codon 
 - Top 5 codon mutations are shown to user in a GUI.
 
 # Contributors
-Ajay Patel
-Aaron Sossin
+- Ajay Patel
+- Aaron Sossin
