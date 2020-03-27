@@ -30,3 +30,7 @@ it is considered a potential mutation of interest and it's index (ie i-th codon 
 - Each potential mutation (codon) of interest from oncogenic sequence is compared to that codon of the patented sequence. 
 - If a mutation in oncogenic sequence never occurs in patented sequence.. it is assigned a higher danger score than if an oncogenic mutation appears in multiple places
 - Top 5 codon mutations are shown to user in a GUI.
+
+# Contributors
+Ajay Patel
+Aaron Sossin
